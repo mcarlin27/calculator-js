@@ -17,7 +17,7 @@ Calculator.prototype.pingPong = function(goal) {
     }
   }
   return output;
-}
+};
 
 exports.calculatorModule = Calculator;
 
@@ -30,8 +30,9 @@ $(document).ready(function() {
     var goal = $("#goal").val();
     var simpleCalculator = new Calculator("hot pink");
     var output = simpleCalculator.pingPong(goal);
+    console.log(output);
     output.forEach(function(element) {
-      $("solution").append("<li>" + element + "</li>");
+      $("#solution").append("<li>" + element + "</li>");
     });
   });
 });
